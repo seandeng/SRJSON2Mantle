@@ -1,0 +1,34 @@
+{
+  "code": 0,
+  "data": {
+    "actionText": "string",
+    "actionUrl": "string",
+    "authorId": 0,
+    "authorName": "string",
+    "balance": 0,
+    "bookId": 0,
+    "bookName": "string",
+    "enableGiveGift": 0,
+    "giftList": [
+      {
+        "giftId": 0,
+        "giftImgUrl": "string",
+        "giftName": "string",
+        "giftPrice": 0
+      }
+    ],
+    "giftMaxCount": 0,
+    "helpUrl": "string",
+    "message": "string",
+    "nickName": "string",
+    "roleList": [
+      {
+        "roleId": 0,
+        "roleName": "string"
+      }
+    ],
+    "userId": 0,
+    "userType": 0
+  },
+  "message": "string"
+}
