@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import sys
 import os
 
-version = '1.0.4'
+version = '1.0.8'
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -37,7 +37,7 @@ setup(
     ],
     entry_points={
       "console_scripts": [
-          "srjson2mantle = srjson2mantle.cli:main",
+          "srjson2mantle = SRJSON2Mantle.cli:main",
       ]
     },
 )

@@ -15,9 +15,9 @@ import sys
 import time
 import types
 
-import objc_template as objc_tpl
-import utils as utils
-from renderer import TemplateRenderer
+import SRJSON2Mantle.objc_template as objc_tpl
+import SRJSON2Mantle.utils as utils
+from SRJSON2Mantle.renderer import TemplateRenderer
 
 
 class SRJSON2Mantle(object):
