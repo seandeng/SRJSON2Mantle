@@ -1,7 +1,8 @@
 {
   "code": 0,
   "data": {
-    "actionText": "string",
+    "actionTextList": ["string","string","string"],
+    "actionNumList": [1,1,1],
     "actionUrl": "string",
     "authorId": 0,
     "authorName": "string",

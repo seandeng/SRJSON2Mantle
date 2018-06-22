@@ -102,16 +102,32 @@ class SRJSON2Mantle(object):
                 if isinstance(value[0], dict):
                     sub_model = self.extract_properties(value[0], new_class_name)
                     results.update(sub_model)
-                item = {
-                    'name': new_name,
-                    'original_name': original_name,
-                    'storage': 'strong',
-                    'class_name': 'NSArray',
-                    'transform': {
-                        'type': 'Array',
-                        'class': new_class_name,
+                    item = {
+                        'name': new_name,
+                        'original_name': original_name,
+                        'storage': 'strong',
+                        'class_name': 'NSArray',
+                        'transform': {
+                            'type': 'Array',
+                            'class': new_class_name,
+                        }
                     }
-                }
+                elif isinstance(value[0], self.str_type):
+                    item = {
+                        'name': new_name,
+                        'original_name': original_name,
+                        'storage': 'strong',
+                        'class_name': 'NSArray',
+                        'transform': None,
+                    }
+                elif isinstance(value[0], int):
+                    item = {
+                        'name': new_name,
+                        'original_name': original_name,
+                        'storage': 'strong',
+                        'class_name': 'NSArray',
+                        'transform': None,
+                    }
             elif isinstance(value, self.str_type):
                 item = {
                     'name': new_name,
