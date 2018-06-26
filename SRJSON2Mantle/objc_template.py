@@ -14,6 +14,9 @@ def header_tpl(data):
     """
     if not data['transform']:
         return None
+    if data['transform']['type'] == 'BOOL':
+        return None
+
     if data['class_name'] == 'NSArray':
         name = data['transform']['class']
     else:
@@ -68,18 +71,34 @@ def transformer_tpl(data):
     """
     if not data['transform']:
         return None
-    string = """
+
+    if data['transform']['type'] == 'BOOL':
+
+        string = """
+/**
+ * Converts '{property}' property from BOOL class.
+ *
+ * @return NSValueTransformer
+ */
++ (NSValueTransformer *){property}JSONTransformer {{
+    return [NSValueTransformer valueTransformerForName:MTLBooleanValueTransformerName];
+}}""".format(
+            property=data['name'],
+        )
+        return string
+
+    else:
+        string = """
 /**
  * Converts '{property}' property from '{class_name}' class.
  *
  * @return NSValueTransformer
  */
-+ (NSValueTransformer *){property}JSONTransformer
-{{
++ (NSValueTransformer *){property}JSONTransformer {{
     return [NSValueTransformer mtl_JSON{type}TransformerWithModelClass:{class_name}.class];
 }}""".format(
-        property=data['name'],
-        type=data['transform']['type'],
-        class_name=data['transform']['class'],
-    )
-    return string
+            property=data['name'],
+            type=data['transform']['type'],
+            class_name=data['transform']['class'],
+        )
+        return string

@@ -17,8 +17,7 @@
  * @see https://github.com/Mantle/Mantle#jsonkeypathsbypropertykey
  * @return NSDictionary
  */
-+ (NSDictionary *)JSONKeyPathsByPropertyKey
-{
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
     // modelProperty : json_field_name
     return @{
             {{property_alias}}

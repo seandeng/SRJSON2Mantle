@@ -1,41 +1,18 @@
 {
   "code": 0,
   "data": {
-    "actionTextList": ["string","string","string"],
-    "actionNumList": [1,1,1],
-    "actionUrl": "string",
-    "authorId": 0,
-    "authorName": "string",
-    "balance": 0,
-    "bookId": 0,
-    "bookName": "string",
-    "enableGiveGift": 0,
-    "giftList": [
+    "isDone":true,
+    "isDone2":11,
+    "dog": [
       {
-        "giftId": 0,
-        "giftImgUrl": "string",
-        "giftName": "string",
-        "giftPrice": 0
-      }
-    ],
-    "giftMaxCount": 0,
-    "helpUrl": "string",
-    "message": "string",
-    "nickName": "string",
-    "roleList": [
+        "name": "Rufus",
+        "age": 15
+      },
       {
-        "roleId": 0,
-        "roleName": "string"
+        "name": "Marty",
+        "age": null
       }
-    ],
-    "roleListV1": [
-      {
-        "roleId": 0,
-        "roleName": "string"
-      }
-    ],
-    "userId": 0,
-    "userType": 0
+    ]
   },
   "message": "string"
 }

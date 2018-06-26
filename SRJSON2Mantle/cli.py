@@ -136,20 +136,22 @@ class SRJSON2Mantle(object):
                     'class_name': 'NSString',
                     'transform': None,
                 }
-            elif isinstance(value, int):
-                item = {
-                    'name': new_name,
-                    'original_name': original_name,
-                    'storage': 'assign',
-                    'class_name': 'NSInteger',
-                    'transform': None,
-                }
             elif isinstance(value, bool):
                 item = {
                     'name': new_name,
                     'original_name': original_name,
                     'storage': 'assign',
                     'class_name': 'BOOL',
+                    'transform': {
+                        'type': 'BOOL',
+                    },
+                }
+            elif isinstance(value, int):
+                item = {
+                    'name': new_name,
+                    'original_name': original_name,
+                    'storage': 'assign',
+                    'class_name': 'NSInteger',
                     'transform': None,
                 }
             elif isinstance(value, float):
