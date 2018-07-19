@@ -1,5 +1,6 @@
 # SRJSON2Mantle
 
+![PyPI](https://img.shields.io/pypi/v/SRJSON2Mantle.svg)
 ![](https://img.shields.io/badge/language-python-orange.svg)
 
 A macOS command line tool that generates Mantle data models based on JSON data.
