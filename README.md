@@ -1,5 +1,7 @@
 # SRJSON2Mantle
 
+![](https://img.shields.io/badge/language-python-orange.svg)
+
 A macOS command line tool that generates Mantle data models based on JSON data.
 
 Feel free to modify the code it creates for you.
