@@ -1,5 +1,9 @@
 # SRJSON2Mantle
 
+![](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![](https://img.shields.io/pypi/status/SRJSON2Mantle.svg)
+![](https://img.shields.io/pypi/pyversions/SRJSON2Mantle.svg)
+![](https://img.shields.io/badge/license-MIT-green.svg)
 ![PyPI](https://img.shields.io/pypi/v/SRJSON2Mantle.svg)
 ![](https://img.shields.io/badge/language-python-orange.svg)
 
