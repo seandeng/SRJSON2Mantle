@@ -50,6 +50,11 @@ class SRJSON2Mantle(object):
         return self.class_prefix + name[0].upper() + name[1:] + self.class_suffix
 
     def _convert_name_style(self, name):
+        """Converts 'var.name.property' to 'varNameProperty' style.
+        """
+        new_name_item = name.split(".")
+        name = new_name_item[0] + "".join([s.capitalize() for s in new_name_item[1:]])
+        
         """Converts `var_name` to `varName` style.
         Moreover, rename those with reserved words
         """
