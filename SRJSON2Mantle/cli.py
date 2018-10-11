@@ -52,9 +52,10 @@ class SRJSON2Mantle(object):
     def _convert_name_style(self, name):
         """Converts 'var.name.property' to 'varNameProperty' style.
         """
+        name = name[0].lower() + name[1:]
         new_name_item = name.split(".")
         name = new_name_item[0] + "".join([s.capitalize() for s in new_name_item[1:]])
-        
+
         """Converts `var_name` to `varName` style.
         Moreover, rename those with reserved words
         """
@@ -83,7 +84,6 @@ class SRJSON2Mantle(object):
 
         for original_name, value in dict_data.items():
             new_name = self._convert_name_style(original_name)
-
             if isinstance(value, dict):
                 new_class_name = self.make_class_name(new_name)
                 sub_model = self.extract_properties(value, new_class_name)
